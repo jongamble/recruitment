@@ -1,0 +1,9 @@
+extends layout
+include ./recruiterMessage.jade
+
+block content
+  h1= title
+  p Welcome to #{title}
+  br
+  each val in recruiters.message
+    +recruiterMessage(val)

@@ -1,0 +1,43 @@
+//--------------------------------//
+//------------- FOOTER -----------//
+//--------------------------------//
+
+.main-footer {
+	background: $dk-blue;
+}
+
+	.copyright {
+		@extend %osre;
+		color:#e3e3e3;
+		margin:20px 0;
+		text-align: center;
+		@include bp(twelve) {
+			margin-top:35px;
+			float:left;
+			text-align: left;
+		}
+		
+
+		a {
+			color:#e3e3e3;
+		}
+		.credit {
+			display: block;
+			@include bp(twelve) {
+				display: inline;
+			}
+		}
+	}
+
+	.footer-social-list {
+		@extend .header-social-list;
+		@include bp(eight) {
+			float: none;
+			margin:auto;
+			width:150px;
+		}
+		@include bp(twelve) {
+			float:right;
+			width:175px;
+		}
+	}

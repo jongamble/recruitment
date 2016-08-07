@@ -1,0 +1,172 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    title Jon Gamble
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css')
+    script.
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-15971184-5', 'auto');
+      ga('send', 'pageview');
+  body
+    header.main-header
+      .container
+        h1.main-header-title Jon Gamble
+        h2.main-header-subtitle Web Developer
+        ul.header-social-list
+          li
+            a.github(href='https://github.com/jongamble', target='_blank')
+              i.fa.fa-github-square
+          li
+            a.codepen(href='http://codepen.io/jongamble/', target='_blank')
+              i.fa.fa-codepen
+          li
+            a.linkedin(href='https://www.linkedin.com/in/jonfgamble', target='_blank')
+              i.fa.fa-linkedin-square
+          li
+            a.twitter(href='https://www.twitter.com/jon_gamble', target='_blank')
+              i.fa.fa-twitter-square
+    section.recruitment
+      .container
+        h1.recruitment-header Submit job opportunity for consideration
+        p.recruitment-copy
+          | Read my LinkedIn profile to get a better sense of what I've been up to lately –
+          a(href='https://www.linkedin.com/in/jonfgamble', target='_blank') https://www.linkedin.com/in/jonfgamble
+        p.recruitment-copy
+          | If you can read code, you can also check out my public open source contributions at
+          a(href='https://github.com/jongamble', target='_blank') https://github.com/jongamble
+        p.recruitment-copy
+          | I am always interested to hear about potential opportunities that might be a fit for me. If you believe you have such an opportunity, please fill out the form below and I will respond as soon as I am able.
+        form.recruitment-form(data-action='lib/inc/recruiter-form-processor.php')
+          .row
+            label(for='company_name') Company Name*
+            input#company_name(type='text', name='company_name')
+            span.recruitment-subtext I will not communicate with any company's HR department without your consent.
+          .row
+            label(for='office_location') Office Location*
+            input#office_location(type='text', name='office_location')
+          .row
+            label(for='company_website') Company Website
+            input#company_website(type='text', name='company_website')
+          .row
+            label(for='contract_perm') Contract/Permanent*
+            input#contract_perm(type='text', name='contract_perm')
+          .row
+            label(for='job_title') Job Title*
+            input#job_title(type='text', name='job_title')
+          // Compensation
+          h3.form-header Compensation
+          .row
+            label(for='annual_pay') Annual Compensation*
+            input#annual_pay(type='text', name='annual_pay')
+            span.recruitment-subtext Base Salary/Compensation (without bonus potential)
+          .row
+            label(for='annual_bonus') Annual Bonus Potential
+            input#annual_bonus(type='text', name='annual_bonus')
+            span.recruitment-subtext Can be listed as dollar amount or percentage of base salary
+          .row
+            label(for='stock_options') Stock Options
+            input#stock_options(type='text', name='stock_options')
+            span.recruitment-subtext Please enter percentage of equity. If none, enter 0.
+          .row
+            label(for='retirement_percent') Retirement Contribution Matching*
+            input#retirement_percent(type='text', name='retirement_percent')
+            span.recruitment-subtext Please enter max percentage of match. If none, enter 0.
+          // Perks
+          h3.form-header Perks
+          .row
+            label(for='vacation_days') Number of Vacation Days*
+            input#vacation_days(type='text', name='vacation_days')
+          .row
+            label(for='personal_days') Number of Personal Days*
+            input#personal_days(type='text', name='personal_days')
+            span.recruitment-subtext Please don't double-count Vacation and Personal days. If none, enter 0.
+          .row
+            label(for='sick_days') Number of Sick Days*
+            input#sick_days(type='text', name='sick_days')
+          .row
+            label(for='telecommute_days') Number of Telecommute Days*
+            input#telecommute_days(type='text', name='telecommute_days')
+            span.recruitment-subtext
+              | Please enter number of days per week the company allows to telecommute/work from home. If none, enter 0.
+          .row
+            label(for='health_insurance') Health Insurance*
+            input#health_insurance(type='text', name='health_insurance')
+            span.recruitment-subtext
+              | Please enter if health insurance is provided, and how much of individual plan is covered.
+          .row
+            label(for='other_perks') Other
+            textarea#other_perks(name='other_perks')
+          // Technologies
+          h3.form-header Technologies
+          .row
+            label(for='browser_side') Browser-side*
+            input#browser_side(type='text', name='browser_side')
+            span.recruitment-subtext ie. jQuery, Backbone.js, Angular.js, Ember.js
+          .row
+            label(for='server_side') Server-side*
+            input#server_side(type='text', name='server_side')
+            span.recruitment-subtext ie. Node.js, Wordpress, Drupal, Python, Ruby, PHP
+          .row
+            label(for='databases') Databases
+            input#databases(type='text', name='databases')
+            span.recruitment-subtext ie. MySQL, PostgreSQL, MongoDB, NoSQL
+          // Management
+          h3.form-header Management
+          .row
+            label(for='manager_name') Name of Direct Manager*
+            input#manager_name(type='text', name='manager_name')
+            span.recruitment-subtext
+              | This is for research purposes only. I will not contact this individual without your consent.
+          .row
+            label(for='manager_title') Job Title of Direct Manager*
+            input#manager_title(type='text', name='manager_title')
+          .row
+            label(for='number_subordinates') Number of People I will Manage
+            input#number_subordinates(type='text', name='number_subordinates')
+            span.recruitment-subtext
+              | This is for research purposes only. I will not contact this individual without your consent.
+          // Other
+          h3.form-header Other Information
+          .row
+            label(for='job_description') Job Description*
+            textarea#job_description(name='job_description')
+            span.recruitment-subtext
+              | Please provide short summary of the job role. What needs to be built, how soon and any other practical details.
+          .row
+            label(for='recruiter_name') Your name*
+            input#recruiter_name(type='text', name='recruiter_name')
+          .row
+            label(for='recruiter_email') Your Email*
+            input#recruiter_email(type='text', name='recruiter_email')
+          input#human_test.human-test(type='text', name='human_test')
+          input#submit.submit(type='submit', name='submit', value='submit')
+        p.recruitment-thankyou Thank you for your submission. I will be in touch shortly!
+    footer.main-footer
+      .container
+        p.copyright
+          | Site and content copyright © Jon Gamble
+          | .
+          span.credit
+            | Site design by
+            a(href='http://www.brennamickey.com', target='_blank') Brenna Mickey
+        ul.footer-social-list
+          li
+            a.github(href='https://github.com/jongamble', target='_blank')
+              i.fa.fa-github-square
+          li
+            a.codepen(href='http://codepen.io/jongamble/', target='_blank')
+              i.fa.fa-codepen
+          li
+            a.linkedin(href='https://www.linkedin.com/in/jonfgamble', target='_blank')
+              i.fa.fa-linkedin-square
+          li
+            a.twitter(href='https://www.twitter.com/jon_gamble', target='_blank')
+              i.fa.fa-twitter-square
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js')
+    script(src='/javascripts/main.js')
